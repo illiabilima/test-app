@@ -1,0 +1,18 @@
+.comment {
+    font-size: 17px;
+    line-height: 24px;
+
+    transition: background-color .2s ease;
+    will-change: background-color;
+
+    background-color: var(--white);
+}
+
+.comment--new {
+    background-color: rgba(204, 236, 252, 0.4);
+}
+
+.comment:not(:last-child) {
+    border-bottom: 1px solid rgba(204, 236, 252, 0.4);
+}
+

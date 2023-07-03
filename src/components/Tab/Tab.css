@@ -1,0 +1,10 @@
+.tab {
+    background-color: var(--gray-light);
+    display: flex;
+    gap: 5px;
+    text-align: center;
+}
+
+.tab--active {
+    background-color: var(--white);
+}

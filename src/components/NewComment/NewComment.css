@@ -1,0 +1,16 @@
+.comment-form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.comment-form__input {
+    border-color: var(--gray-light);
+}
+
+.comment-form__btn {
+    color: var(--white);
+    background-color: var(--blue);
+}

@@ -1,0 +1,101 @@
+.filter {
+    position: relative;
+}
+
+.filter__btn {
+    --arrow-width: 5px;
+    --rotate: 0;
+    --arrow-shift: 1px;
+
+    cursor: pointer;
+    color: var(--blue);
+    text-decoration: underline;
+    position: relative;
+
+}
+
+.filter__btn--opened {
+    --rotate: 180deg;
+    --arrow-shift: -1px;
+}
+
+.filter__btn::after,
+.filter__btn::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -15px;
+    transform: rotate(var(--rotate));
+}
+
+.filter__btn::after {
+    top: calc(50% - var(--arrow-width) / 2);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid currentColor;
+}
+
+.filter__btn::before {
+    top: calc(50% - var(--arrow-width) / 2 - var(--arrow-shift));
+    z-index: 1;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--white);
+}
+
+.filter__actions {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: var(--white);
+
+    padding: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0, .3);
+    border-radius: 4px;
+}
+
+.filter__label {
+    --radio-opacity: 0;
+    --radio-bg: transparent;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.filter__radio {
+    background-color: var(--radio-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .1s;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid var(--gray-light);
+}
+
+.filter__radio:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    box-shadow: 0 1px rgba(0,0,0, .1);
+    transition: opacity .1s;
+    opacity: var(--radio-opacity);
+
+    background-color: var(--white);
+}
+
+.filter__label--checked {
+    --radio-opacity: 1;
+    --radio-bg: var(--blue);
+}
