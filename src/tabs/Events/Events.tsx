@@ -44,10 +44,7 @@ export default function Events(): ReactElement {
     });
 
     function removeFromNew(id: number) {
-        setNewlyAdded(prevState => {
-            console.log(prevState);
-            return prevState.filter(item => item !== id);
-        });
+        setNewlyAdded(prevState => prevState.filter(item => item !== id));
     }
 
     return (
