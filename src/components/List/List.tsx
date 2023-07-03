@@ -4,8 +4,6 @@ import { ListProps } from "./List.props";
 
 export default function List({ comments, className, newAdded, removeNew }: ListProps): ReactElement {
 
-    console.log(newAdded);
-
     return (
         <ul className={className}>
             {comments.map(comment => (
