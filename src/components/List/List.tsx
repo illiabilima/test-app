@@ -1,4 +1,4 @@
-import { ReactElement, useCallback } from "react";
+import { ReactElement } from "react";
 import Comment from "../Comment/Comment";
 import { ListProps } from "./List.props";
 

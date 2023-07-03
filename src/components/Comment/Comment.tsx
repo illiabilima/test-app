@@ -8,7 +8,7 @@ export default function Comment({ title, body, isNew, removeFromNew }: Component
         if (isNew) {
             setTimeout(() => removeFromNew(), 1000);
         }
-    }, [isNew]);
+    }, [isNew, removeFromNew]);
     
     return (
         <li className={`px-8 py-5 comment ${isNew ? "comment--new" : ""}`}>
