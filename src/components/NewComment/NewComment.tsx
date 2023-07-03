@@ -9,6 +9,10 @@ export default function NewComment({ onSubmit, className }: NewCommentProps): Re
 
     function submitForm(e: FormEvent) {
         e.preventDefault();
+        if (!comment) {
+            alert("Без символів не можна!");
+            return;
+        }
         onSubmit(comment);
         setComment("");
     }
